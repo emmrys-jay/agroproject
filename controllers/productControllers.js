@@ -59,10 +59,6 @@ const updateProduct = asyncHandler(async (req,res) => {
 //@desc Delete a product
 //@route DELETE /api/products/:id
 const deleteProduct = asyncHandler(async (req,res) => {
-    // const product = await Product.findById(req.params.id);
-    // if (!product) {
-       
-    // };
 
     const deletedProduct = await Product.findByIdAndDelete(req.params.id);
     if (!deletedProduct) {
